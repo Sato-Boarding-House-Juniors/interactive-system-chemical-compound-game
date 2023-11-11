@@ -5,7 +5,28 @@ using UnityEngine;
 public class seed : MonoBehaviour
 {
     private Rigidbody2D _rb;
-    private bool isDrop = false;
+    public bool isMergeFlag = false;
+    public bool isDrop = false;
+    public int seedNo;
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        GameObject colobj = collision.gameObject;
+        if (colobj.CompareTag("seed"))
+        {
+            seed colseed = collision.gameObject.GetComponent<seed>();
+            if (seedNo == colseed.seedNo &&
+                !isMergeFlag &&
+                !colseed.isMergeFlag &&
+                seedNo < GameManager.Instance.MaxSeedNo - 1)
+            {
+                isMergeFlag = true;
+                colseed.isMergeFlag = true;
+                GameManager.Instance.MergeNext(transform.position, seedNo);
+                Destroy(gameObject);
+                Destroy(colseed.gameObject);
+            }
+        }
+    }
 
     void Start()
     {

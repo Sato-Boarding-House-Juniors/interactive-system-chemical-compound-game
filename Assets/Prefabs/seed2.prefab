@@ -15,11 +15,11 @@ GameObject:
   - component: {fileID: 2762251751474545747}
   m_Layer: 0
   m_Name: seed2
-  m_TagString: Untagged
+  m_TagString: seed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2793558475854299224
 Transform:
   m_ObjectHideFlags: 0
@@ -161,3 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c62decb4a944a47af9c7afd2ed7269b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMergeFlag: 0
+  isDrop: 0
+  seedNo: 0
