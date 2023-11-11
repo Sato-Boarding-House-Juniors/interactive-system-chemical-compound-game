@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     public bool isNext { get; set; }
 
-    [SerializeField] private GameObject seedPrefab;
+    [SerializeField] private GameObject[] seedPrefab;
     [SerializeField] private Transform seedPosition;
 
     void Start()
@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     }
     private void CreateSeed()
     {
-        Instantiate(seedPrefab, seedPosition);
+        int i = Random.Range(0, seedPrefab.Length - 2);
+        Instantiate(seedPrefab[i], seedPosition);
     }
 }

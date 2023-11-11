@@ -634,7 +634,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 068d67fce35f242c7a2eb68a8291e5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seedPrefab: {fileID: 1560543621194961348, guid: c82f80a4d6e4845878defbeb489451ab, type: 3}
+  seedPrefab:
+  - {fileID: 1560543621194961348, guid: c82f80a4d6e4845878defbeb489451ab, type: 3}
+  - {fileID: 1560543621194961348, guid: 1027198ace4b1476d935f8398f897163, type: 3}
+  - {fileID: 1560543621194961348, guid: 8e386a3bf3b3849a9b56ff58e2e486fe, type: 3}
+  - {fileID: 1560543621194961348, guid: 0b9f56aaa77704c129de73f6733af61f, type: 3}
+  - {fileID: 1560543621194961348, guid: 9cf3c4436bf914cce95d4731aba7fdb1, type: 3}
   seedPosition: {fileID: 2110815334}
 --- !u!4 &1704451946
 Transform:
