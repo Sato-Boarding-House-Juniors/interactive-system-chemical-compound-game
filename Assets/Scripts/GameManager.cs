@@ -4,14 +4,26 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; }
+    public bool isNext { get; set; }
+
     [SerializeField] private GameObject seedPrefab;
     [SerializeField] private Transform seedPosition;
 
     void Start()
     {
+        Instance = this;
+        isNext = false;
         CreateSeed();
     }
-
+    void Update()
+    {
+        if (isNext)
+        {
+            isNext = false;
+            Invoke("CreateSeed", 2f);
+        }
+    }
     private void CreateSeed()
     {
         Instantiate(seedPrefab, seedPosition);

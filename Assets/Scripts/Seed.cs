@@ -31,5 +31,6 @@ public class seed : MonoBehaviour
     {
         isDrop = true;
         _rb.simulated = true;
+        GameManager.Instance.isNext = true;
     }
 }
