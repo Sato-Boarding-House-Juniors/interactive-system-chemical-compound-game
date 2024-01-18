@@ -40,7 +40,7 @@ public class seed : MonoBehaviour
     {
         timeSinceLastDrop += Time.deltaTime;
 
-        if (timeSinceLastDrop >= dropInterval && isDrop == false)
+        if ((timeSinceLastDrop >= dropInterval || Input.GetMouseButtonDown(0)) && isDrop == false)
         {
             Drop();
             timeSinceLastDrop = 0.0f;
