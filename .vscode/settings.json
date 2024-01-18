@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "interactive-system-suicagame-tutorial.sln"
+    "dotnet.defaultSolution": "interactive-system-chemical-compound-game.sln"
 }
