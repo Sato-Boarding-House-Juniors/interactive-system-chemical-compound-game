@@ -8,6 +8,9 @@ public class seed : MonoBehaviour
     public bool isMergeFlag = false;
     public bool isDrop = false;
     public int seedNo;
+    private float dropInterval = 3.0f;
+    private float timeSinceLastDrop = 0.0f;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject colobj = collision.gameObject;
@@ -35,8 +38,13 @@ public class seed : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButton(0) && isDrop == false)
+        timeSinceLastDrop += Time.deltaTime;
+
+        if (timeSinceLastDrop >= dropInterval && isDrop == false)
+        {
             Drop();
+            timeSinceLastDrop = 0.0f;
+        }
 
         if (isDrop) return;
 
