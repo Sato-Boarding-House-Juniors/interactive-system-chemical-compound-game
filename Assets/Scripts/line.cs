@@ -8,7 +8,7 @@ public class line : MonoBehaviour
         if (collision.CompareTag("seed"))
         {
             stayTime += Time.deltaTime;
-            if (stayTime > 4.0f)
+            if (stayTime > 2.0f)
             {
                 SceneManager.LoadScene(0);
             }
