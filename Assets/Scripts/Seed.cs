@@ -50,7 +50,7 @@ public class seed : MonoBehaviour
 
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-        mousePos.x = Mathf.Clamp(mousePos.x, -1f, 1f);
+        mousePos.x = Mathf.Clamp(mousePos.x, -1.35f, 1.35f);
         mousePos.y = 3.5f;
 
         transform.position = mousePos;
